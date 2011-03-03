@@ -118,6 +118,7 @@ endif
 
 
 " Look for debugger.py, first in same dir as this file
+" TODO: lazy-load this only when the debugger is getting used
 if filereadable(expand("<sfile>:p:h")."/debugger.py")
   execute "pyfile " . expand("<sfile>:p:h")."/debugger.py"
 elseif filereadable($VIMRUNTIME."/plugin/debugger.py")
