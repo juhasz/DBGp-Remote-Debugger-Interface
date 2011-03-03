@@ -117,7 +117,10 @@ if !has("python")
 endif
 
 
-if filereadable($VIMRUNTIME."/plugin/debugger.py")
+" Look for debugger.py, first in same dir as this file
+if filereadable(expand("<sfile>:p:h")."/debugger.py")
+  execute "pyfile " . expand("<sfile>:p:h")."/debugger.py"
+elseif filereadable($VIMRUNTIME."/plugin/debugger.py")
   pyfile $VIMRUNTIME/plugin/debugger.py
 elseif filereadable($HOME."/.vim/plugin/debugger.py")
   pyfile $HOME/.vim/plugin/debugger.py
