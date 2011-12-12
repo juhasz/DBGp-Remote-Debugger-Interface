@@ -13,16 +13,16 @@
 "               at	http://www.vim.org/scripts/script.php?script_id=1152
 "               Developed by Sam Ghods <sam <at> box.net>
 "               at http://www.vim.org/scripts/script.php?script_id=1929
-"        Usage: 
-"               to set the socket waiting time before timeout(default 
+"        Usage:
+"               to set the socket waiting time before timeout(default
 "               5 second) use :
-"               
+"
 "                 let g:debuggerTimeout = 10
 "
-"               above snippet use 10 second 
+"               above snippet use 10 second
 "
-"               By default the script will create a dedicated tab for each 
-"               debugging session, 
+"               By default the script will create a dedicated tab for each
+"               debugging session,
 "
 "                 let g:debuggerDedicatedTab = 1
 "
@@ -30,8 +30,8 @@
 "               change it to 0, remember you would lost undo history on that
 "               tab!
 "
-"               note : 
-"               if you are using gVim/vim.gui and want to use a dedicated tab 
+"               note :
+"               if you are using gVim/vim.gui and want to use a dedicated tab
 "               make sure to always show tab
 "
 "               if has("gui_running")
@@ -94,13 +94,13 @@
 "                       contributed by Michael Bahnmiller
 "               1.0   o add tab-page support for Vim 7.x from Sam Ghods latest script
 "                       at http://www.vim.org/scripts/script.php?script_id=1929
-"      
+"
 " Known Issues: o if you are using gVim, makesure the showtabline options set to
-"                 2 (always show tab) before start a new debugging session, 
+"                 2 (always show tab) before start a new debugging session,
 "                 this is a known problem to the gtk/gnome build about
 "                 gui window resizing.
 "               o there are possibility after each debugging session ends, the
-"                 folding, coloring, etc goes weird. this may occur if you're using 
+"                 folding, coloring, etc goes weird. this may occur if you're using
 "                 a custom syntax file, so you might wanna re-source your syntax
 "                 file after each debugging session
 "
@@ -163,7 +163,7 @@ sign define breakpt text=B>  texthl=DbgBreakPt linehl=DbgBreakPt
 
 if !exists('g:debuggerPort')
   let g:debuggerPort = 9000
-endif 
+endif
 if !exists('g:debuggerMaxChildren')
   let g:debuggerMaxChildren = 32
 endif
@@ -200,7 +200,7 @@ function! s:stopDebugging()
         python debugger_quit()
         " if your code goes weird re-source your syntax file, or any other
         " cleanups here
-        "source ~/.vim/plugin/torte.vim 
+        "source ~/.vim/plugin/torte.vim
 endfunction
 
 "=============================================================================
