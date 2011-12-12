@@ -146,7 +146,7 @@ map <S-F11> :python debugger_context()<cr>
 map <S-F12> :python debugger_property()<cr>
 map <S-F11> :python debugger_watch_input("context_get")<cr>A<cr>
 map <S-F12> :python debugger_watch_input("property_get", '<cword>')<cr>A<cr>
-nnoremap ,e :python debugger_watch_input("eval")<cr>A
+nnoremap ,xde :python debugger_watch_input("eval")<cr>A
 
 
 "=============================================================================
